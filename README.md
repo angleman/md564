@@ -15,9 +15,12 @@ md564 = new require('md564')
 console.log(MD564('hello'))        // 1TGK0fk4hfTgamcP4G5xMI
 obj1  = {bar: 'grill', foo: 'man'}
 obj2  = {foo: 'man', bar: 'grill'}
-console.log(MD564(obj1))           // 3MEEOkTwl6NBNuzrYVpHeX
-console.log(MD564(obj2))           // 3MEEOkTwl6NBNuzrYVpHeX
+console.log(MD564(obj1, true))    // 3MEEOkTwl6NBNuzrYVpHeX
+console.log(MD564(obj2))          // 0_8LeiEkKgp~Kwo5qV15E1
+console.log(MD564(obj2, true))    // 3MEEOkTwl6NBNuzrYVpHeX
 ```
+
+If param2 is ```true``` then the object attributes will be sorted prior to being made into a string and obtaining the MD5 value.
 
 ## Contributions :muscle:
 

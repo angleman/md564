@@ -16,16 +16,20 @@ function MD564(config) {
 		return result;
 	}
 
-	function md564(obj) {
+	function md564(obj, sort) {
 		if (typeof obj != 'string') {
-			var attributes      = getAttributes(obj)
-			var sortedAttr      = sortArray(attributes)
-			var sortedObj       = {}
-			for (var i=0; i < sortedAttr.length; i++) {
-				var attr        = sortedAttr[i]
-				sortedObj[attr] = obj[attr]
+			if (sort) {
+				var attributes      = getAttributes(obj)
+				var sortedAttr      = sortArray(attributes)
+				var sortedObj       = {}
+				for (var i=0; i < sortedAttr.length; i++) {
+					var attr        = sortedAttr[i]
+					sortedObj[attr] = obj[attr]
+				}
+				obj = JSON.stringify(sortedObj)
+			} else {
+				obj = JSON.stringify(obj)
 			}
-			obj = JSON.stringify(sortedObj)
 		}
 		var md5    = MD5(obj)
 		var result = convert64.from16(md5)
