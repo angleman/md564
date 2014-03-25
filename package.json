@@ -1,6 +1,6 @@
 {
   "name": "md564",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "description": "Base64 MD5 of strings and JSON, where JSON attributes are sorted before comparison for consistent results",
   "main": "index.js",
   "scripts": {
