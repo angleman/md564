@@ -12,6 +12,11 @@ npm install md564
 
 ```js
 md564 = new require('md564')
+console.log(MD564('hello'))        // 1TGK0fk4hfTgamcP4G5xMI
+obj1  = {bar: 'grill', foo: 'man'}
+obj2  = {foo: 'man', bar: 'grill'}
+console.log(MD564(obj1))           // 3MEEOkTwl6NBNuzrYVpHeX
+console.log(MD564(obj2))           // 3MEEOkTwl6NBNuzrYVpHeX
 ```
 
 ## Contributions :muscle:
